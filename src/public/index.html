@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat TIN</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+    integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+	<nav class="navbar navbar-light bg-warning" style="background: #00467F;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	">
+		<a class="navbar-brand mx-auto" href="/">Chat Java</a>
+	</nav>
+
+	<div class="card col-md-4  mt-5 mx-auto" id="nickWrap">
+		<div class="card-header">
+			<h3><i class="fas fa-user"></i> Ingresa tu Nombre de Usuario</h3>
+		</div>
+		<p id="nickError"></p>
+		<div class="card-body">
+			<form id="nickForm">
+				<input type="text" id="nickname" class="form-control">
+				<button type="submit" class="btn btn-warning mt-2" style="background: #00467F;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				">
+					<i class="fas fa-share"></i> Enviar
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container" id="contentWrap">
+		<div class="row">
+			<div class="col-md-6 offset-md-1 mt-4">
+				<div class="card">
+					<div class="card-header">
+						<h4>Hablemos</h4>
+					</div>
+					<div id="chat" class="card-body"></div>
+					<form id="message-form" class="card-footer">
+						<div class="input-group">
+							<input type="text" id="message" class="form-control">
+						<div class="input-group-append">
+							<button type="submit" class="btn btn-warning" style="background: #00467F;  /* fallback for old browsers */
+							background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+							background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+							">
+								<i class="fas fa-share"></i> Enviar
+							</button>
+						</div>
+						</div>
+					</form>
+	
+				</div>
+			</div>
+			<div class="card col-md-3 mt-4">
+				<div class="card-header">
+					<h3>Usuarios</h3>
+				</div>
+				<div class="card-body">
+					<div id="usernames"></div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+</html>
