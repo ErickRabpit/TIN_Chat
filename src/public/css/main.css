@@ -1,8 +1,7 @@
 body{
-	background: #16A085;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, yellow, #009966 20%, purple);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, yellow, #009966 20%, purple); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	background-image: url("../img/bg.jpg"), url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-color: #000;
 }
 
 #contentWrap {
